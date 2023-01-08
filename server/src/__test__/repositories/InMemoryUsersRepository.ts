@@ -1,10 +1,10 @@
 import User from "../../entities/User";
 import UserRepository from "../../repositories/UsersRepository";
 
-class InMemoryUsersReposotiry implements UserRepository {
+class InMemoryUsersRepository implements UserRepository {
   public users: User[] = [];
   
-  async findMany(): Promise<User[]> {
+  async getUsers(): Promise<User[]> {
     return Promise.resolve(this.users);
   }
 
@@ -39,4 +39,4 @@ class InMemoryUsersReposotiry implements UserRepository {
   }
 }
 
-export default InMemoryUsersReposotiry;
+export default InMemoryUsersRepository;
