@@ -1,15 +1,11 @@
-interface RandomUserProps {
+class RandomUser {
   picture: string;
   name: string;
   email: string;
   username: string;
   age: number;
-}
 
-class RandomUser {
-  pros: RandomUserProps;
-
-  constructor(props: RandomUserProps) {
+  constructor(props: RandomUser) {
     Object.assign(this, props);
   }
 }
