@@ -1,4 +1,4 @@
-import InMemoryRandomUsersRepository from "../__test__/repositories/InMemoryRandomUsersRepository";
+import InMemoryRandomUsersRepository from "../__tests__/repositories/InMemoryRandomUsersRepository";
 import { GetRandomUsers } from "./getRandomUsers";
 
 describe("Get Random Users", () => {
