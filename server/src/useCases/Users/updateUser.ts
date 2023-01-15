@@ -1,5 +1,6 @@
-import User from "../entities/User";
-import UserRepository from "../repositories/UsersRepository";
+import User from "../../entities/User";
+import { AppError } from "../../errors/AppError";
+import UserRepository from "../../repositories/UsersRepository";
 
 class UpdateUser {
   constructor(private usersRepository: UserRepository) {}
@@ -8,7 +9,7 @@ class UpdateUser {
     const userExists = await this.usersRepository.findById(user.id);
 
     if(!userExists) {
-      throw new Error("User does not exists.");
+      throw new AppError("User does not exists.");
     }
 
     await this.usersRepository.save(user);
