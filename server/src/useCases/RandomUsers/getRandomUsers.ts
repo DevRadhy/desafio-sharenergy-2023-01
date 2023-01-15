@@ -1,4 +1,4 @@
-import RandomUsersRepository from "../repositories/RandomUsersRepository";
+import RandomUsersRepository from "../../repositories/RandomUsersRepository";
 
 export class GetRandomUsers {
   constructor(private usersRepository: RandomUsersRepository) {}

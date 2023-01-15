@@ -1,5 +1,5 @@
-import User from "../entities/User";
-import UserRepository from "../repositories/UsersRepository";
+import User from "../../entities/User";
+import UserRepository from "../../repositories/UsersRepository";
 
 export class CreateUser {
   constructor(private usersRepository: UserRepository) {}
@@ -9,6 +9,6 @@ export class CreateUser {
 
     await this.usersRepository.create(user);
 
-    return user;
+    return data;
   }
 }

@@ -1,4 +1,5 @@
-import UserRepository from "../repositories/UsersRepository";
+import { AppError } from "../../errors/AppError";
+import UserRepository from "../../repositories/UsersRepository";
 
 class FindUser {
   constructor(private userRepository: UserRepository) {}
@@ -7,7 +8,7 @@ class FindUser {
     const user = await this.userRepository.findById(id);
 
     if(!user) {
-      throw new Error("User does not exists.");
+      throw new AppError("User does not exists.");
     }
 
     return user;
