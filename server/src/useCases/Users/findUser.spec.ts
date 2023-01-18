@@ -1,5 +1,5 @@
-import { UserFactory } from "../__tests__/factories/UserFactory";
-import InMemoryUsersReposotiry from "../__tests__/repositories/InMemoryUsersRepository";
+import { UserFactory } from "../../__tests__/factories/UserFactory";
+import InMemoryUsersReposotiry from "../../__tests__/repositories/InMemoryUsersRepository";
 import { CreateUser } from "./createUser";
 import { FindUser } from "./findUser";
 

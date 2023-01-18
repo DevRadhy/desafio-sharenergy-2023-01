@@ -1,4 +1,4 @@
-import UserRepository from "../repositories/UsersRepository";
+import UserRepository from "../../repositories/UsersRepository";
 
 class GetUsers {
   constructor(private userRepository: UserRepository) {}
