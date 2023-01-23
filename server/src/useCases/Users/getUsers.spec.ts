@@ -21,6 +21,8 @@ describe("Get All Users", () => {
 
     const users = await getUsers.execute();
 
+    console.log(users);
+
     expect(users.length).toEqual(3);
     expect(users).toEqual(expect.arrayContaining([
       expect.objectContaining({ id: "user-01" }),

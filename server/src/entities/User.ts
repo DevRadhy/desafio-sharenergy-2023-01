@@ -1,3 +1,5 @@
+import { randomUUID } from 'crypto';
+
 class User {
   id: string;
   name: string;
@@ -6,8 +8,12 @@ class User {
   adress: string;
   cpf: string;
 
-  constructor(props: User) {
+  constructor(props: Omit<User, 'id'>, id?: string) {
     Object.assign(this, props);
+
+    if(!id) {
+      this.id = randomUUID();
+    }
   }
 }
 
